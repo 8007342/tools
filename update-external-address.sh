@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Run this file in a cron job like so:
+#
+# bash <(curl -sSL https://raw.githubusercontent.com/8007342/tools/main/update-external-address.sh) --hosted_zone_id=<my_hosted_zone> <my_domain>
+
+# For debugging purposes
 DRY_RUN=false
 
 # Parse arguments
