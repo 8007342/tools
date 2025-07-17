@@ -68,7 +68,7 @@ fi
 DKIM_TXT_VALUE=$(grep -oP '"[^"]+"' ${DKIM_TXT} | tr -d '"' | tr -d '\n' | fold -w250 | sed 's/^/\\"/;s/$/\\" /' | tr -d '\n')
 
 # Build Route 53 change batch
-cat > change-batch.json <<EOF
+cat > "${DKIM_DIR}/change-batch.json" <<EOF
 {
   "Comment": "Update ${TYPE} and SPF TXT record dynamically",
   "Changes": [
@@ -175,5 +175,5 @@ else
   # Send it off to route53 way
   aws route53 change-resource-record-sets \
     --hosted-zone-id ${HOSTED_ZONE_ID} \
-    --change-batch file://change-batch.json
+    --change-batch file://${DKIM_DIR}/change-batch.json
 fi
