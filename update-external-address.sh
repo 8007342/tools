@@ -3,6 +3,10 @@
 # Run this file in a cron job like so:
 #
 # bash <(curl -sSL https://raw.githubusercontent.com/8007342/tools/main/update-external-address.sh) --hosted_zone_id=<my_hosted_zone> <my_domain>
+#
+# Don't forget your session vars: 
+#    AWS_ACCESS_KEY_ID=SOME_SECRET
+#    AWS_SECRET_ACCESS_KEY=MORE_SECRETS
 
 # For debugging purposes
 DRY_RUN=false
