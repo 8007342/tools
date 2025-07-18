@@ -162,19 +162,6 @@ cat > "${DKIM_DIR}/change-batch.json" <<EOF
     {
       "Action": "UPSERT",
       "ResourceRecordSet": {
-        "Name": "_acme-challenge.${DOMAIN}",
-        "Type": "TXT",
-        "TTL": 86400,
-        "ResourceRecords": [
-          {
-            "Value": "\"0UkLR2h7QAKeU1xGwuToYVvSV3jEohBeYHgDH8RYTw8\""
-          }
-        ]
-      }
-    },
-    {
-      "Action": "UPSERT",
-      "ResourceRecordSet": {
         "Name": "default._domainkey.${DOMAIN}",
         "Type": "TXT",
         "TTL": 86400,
