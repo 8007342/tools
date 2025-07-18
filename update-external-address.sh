@@ -167,7 +167,7 @@ cat > "${DKIM_DIR}/change-batch.json" <<EOF
         "TTL": 86400,
         "ResourceRecords": [
           {
-            "Value": "0UkLR2h7QAKeU1xGwuToYVvSV3jEohBeYHgDH8RYTw8"
+            "Value": "\"0UkLR2h7QAKeU1xGwuToYVvSV3jEohBeYHgDH8RYTw8\""
           }
         ]
       }
